@@ -24,3 +24,13 @@ jobs:
 
       - name: Push Docker Image
         run: docker push sharmaanchal01/myportfolio:latest
+
+      - name: Set uo kube config 
+        run: |
+         mkdir -p ~/.kube
+         echo "${{ secrets.KUBE_CONFIG }}" > ~/.kube/config
+      - name: Deploy to kubernetes 
+        run: |
+         kubectl apply -f K8S/deployment.yaml
+         kubectl apply -f K8S/service.yaml
+         kubectl rollout restart deployment portfolio-deployment 
