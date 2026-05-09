@@ -25,4 +25,5 @@ jobs:
       - name: Push Docker Image
         run: docker push sharmaanchal01/myportfolio:latest
 
-      
+      - name: Docker run container 
+        run: docker run -d -p 3000:80 sharmaanchal01/myportfolio:latest
