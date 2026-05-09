@@ -75,61 +75,72 @@ function App() {
 
 
       {/* PROJECTS */}
-      <section className="px-8 py-20 bg-slate-900">
+<section className="px-8 py-20 bg-slate-900">
 
-        <h2 className="text-5xl font-bold text-center mb-16">
-          Projects 🔥
-        </h2>
+  <h2 className="text-5xl font-bold text-center mb-16">
+    Projects 🔥
+  </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-          {[
-            {
-              title: "Dockerized React App",
-              desc: "Containerized React app using Docker."
-            },
-            {
-              title: "Kubernetes Deployment",
-              desc: "Deployed app on Kubernetes cluster."
-            },
-            {
-              title: "GitHub Actions CI/CD",
-              desc: "Automated CI/CD pipeline."
-            },
-            {
-              title: "ArgoCD GitOps",
-              desc: "Implemented GitOps workflow."
-            },
-            {
-              title: "Terraform AWS",
-              desc: "Provisioned infrastructure using Terraform."
-            },
-            {
-              title: "Online Pharmacy System",
-              desc: "Python-based pharmacy management project."
-            }
-          ].map((project) => (
-            <div
-              key={project.title}
-              className="bg-slate-950 border border-slate-700 p-8 rounded-2xl hover:border-cyan-400 transition"
-            >
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">
-                {project.title}
-              </h3>
+    {[
+      {
+        title: "Emergency Healthcare",
+        desc: "Healthcare project built using HTML.",
+        link: "https://github.com/aanchal0097/emergency-healthcare"
+      },
+      {
+        title: "AWS S3 Icecream Website",
+        desc: "Responsive Ice Cream website hosted on AWS S3.",
+        link: "https://github.com/aanchal0097/aws-s3-icecream-website"
+      },
+      {
+        title: "AWS Cost Monitoring Alert",
+        desc: "AWS billing alert system using Python.",
+        link: "https://github.com/aanchal0097/aws-cost-monitoring-alert"
+      },
+      {
+        title: "Todo App",
+        desc: "Simple Todo application using Python.",
+        link: "https://github.com/aanchal0097/todo-app"
+      },
+      {
+        title: "Static Site Auto Deploy",
+        desc: "Automated static website deployment project.",
+        link: "https://github.com/aanchal0097/static-site-auto-deploy"
+      },
+      {
+        title: "DevOps Portfolio",
+        desc: "Dockerized React portfolio with GitHub Actions CI/CD.",
+        link: "https://github.com/aanchal0097/Portfolio"
+      }
+    ].map((project) => (
+      <div
+        key={project.title}
+        className="bg-slate-950 border border-slate-700 p-8 rounded-2xl hover:border-cyan-400 transition"
+      >
+        <h3 className="text-2xl font-bold text-cyan-400 mb-4">
+          {project.title}
+        </h3>
 
-              <p className="text-gray-300 mb-6">
-                {project.desc}
-              </p>
+        <p className="text-gray-300 mb-6">
+          {project.desc}
+        </p>
 
-              <button className="bg-cyan-400 text-black px-5 py-2 rounded-lg font-semibold hover:scale-105 transition">
-                View Project
-              </button>
-            </div>
-          ))}
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="bg-cyan-400 text-black px-5 py-2 rounded-lg font-semibold hover:scale-105 transition">
+            View Project
+          </button>
+        </a>
+      </div>
+    ))}
 
-        </div>
-      </section>
-
+  </div>
+</section>
 
       {/* ABOUT */}
       <section className="px-8 py-24 text-center">
